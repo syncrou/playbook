@@ -8,8 +8,7 @@
 #
 # ansible-playbook pkginfo.yml --ask-pass --extra-vars "pkg=httpd host=192.16.207.142 user=root"
 #
-  - hosts: '{{ host }}'
-    user: '{{ user }}'
+  - user: '{{ user }}'
     gather_facts: no
     tasks:
     - shell: yum info '{{ pkg }}'
