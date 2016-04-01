@@ -9,7 +9,8 @@
 #
 # ansible-playbook pkginfo.yml --ask-pass --extra-vars "pkg=httpd sleep=2 user=root"
 #
-  - user: '{{ user }}'
+  - hosts: all 
+    user: '{{ user }}'
     gather_facts: no
     tasks:
     - shell: sleep '{{ sleep }}'
