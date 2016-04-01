@@ -7,10 +7,9 @@
 # sleep => how long to sleep in seconds
 # pkg   => The name of the package to list
 #
-# ansible-playbook pkginfo.yml --ask-pass --extra-vars "pkg=httpd sleep=2 host=192.16.207.142 user=root"
+# ansible-playbook pkginfo.yml --ask-pass --extra-vars "pkg=httpd sleep=2 user=root"
 #
-  - hosts: '{{ host }}'
-    user: '{{ user }}'
+  - user: '{{ user }}'
     gather_facts: no
     tasks:
     - shell: sleep '{{ sleep }}'
