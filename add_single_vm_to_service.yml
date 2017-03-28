@@ -17,7 +17,7 @@
 
     - name: Create an array of vms
       set_fact:
-        vms: "{{ vms|default([]) + [ { 'href': "{{ svc_url }}", 'resource':  { 'href': item } } ] }}"
+        vms: "{{ vms|default([]) + [ { 'href': '{{ svc_url }}', 'resource':  { 'href': item } } ] }}"
       with_items:
         - "{{ vm_url }}"
 
