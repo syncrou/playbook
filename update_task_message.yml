@@ -8,7 +8,7 @@
 # manageiq_message
 - hosts: localhost
   vars:
-    options: { 'msg': "{{ manageiq_message }}" }
+    options: { 'user_message': "{{ manageiq_message }}" }
 
   tasks:
     - name: Set the task url
