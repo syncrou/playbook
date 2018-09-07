@@ -7,8 +7,8 @@
 # manageiq_password
 # manageiq_message
 - hosts: localhost
-  vars:
-    options: { 'user_message': "{{ manageiq_message }}" }
+  #vars:
+  #  options: { 'user_message': "{{ manageiq_message }}" }
 
   tasks:
     - debug: msg="root object attributes {{ manageiq_api_url }}"
