@@ -11,7 +11,8 @@
   #  options: { 'user_message': "{{ manageiq_message }}" }
 
   tasks:
-    - debug: msg="root object attributes {{ manageiq_api_url }}"
+    #- debug: msg="root object attributes {{ manageiq_api_url }}"
+    - debug: msg="here is all vars {{ vars | to_nice_json }}"
     #- name: Set the task url
     #  set_fact:
     #    task_url: "{{ manageiq_api_url }}/api/{{ manageiq_task_href_slug }}"
